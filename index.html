@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>View Token</title>
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body ng-controller="MainCtrl as mainCtrl">
+	
+	<h1>Hello {{1 + 1}}nd time AngularJS</h1>
+    <input type="text" ng-model="tokenKey" placeholder="Token Key" />
+    <button type="button" ng-click="mainCtrl.viewToken(tokenKey)">Send Token</button>
+    <div>http://555f372a.ngrok.io/View/268cb813-1972-4054-bd4a-be81281c427a</div>
+
+    <div ng-repeat="responseItem in mainCtrl.response">{{responseItem}}</div>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="controller.js"></script>
+
+</body>
+</html>
